@@ -269,7 +269,8 @@ workflow Mutect2 {
                 gga_vcf_idx = gga_vcf_idx,
                 gatk_override = gatk_override,
                 gatk_docker = gatk_docker,
-                disk_space = m2_per_scatter_size
+                disk_space = m2_per_scatter_size,
+                cpu = 2
         }
     }
 
