@@ -229,7 +229,7 @@ workflow Mutect2 {
 
     Int m2_output_size = tumor_bam_size / scatter_count
     #TODO: do we need to change this disk size now that NIO is always going to happen (for the google backend only)
-    Int m2_per_scatter_size = (tumor_bam_size + normal_bam_size) + ref_size + gnomad_vcf_size + m2_output_size + disk_pad
+    Int m2_per_scatter_size = 2 * ((tumor_bam_size + normal_bam_size) + ref_size + gnomad_vcf_size + m2_output_size + disk_pad)
 
     call SplitIntervals {
         input:
@@ -269,8 +269,7 @@ workflow Mutect2 {
                 gga_vcf_idx = gga_vcf_idx,
                 gatk_override = gatk_override,
                 gatk_docker = gatk_docker,
-                disk_space = m2_per_scatter_size,
-                cpu = 2
+                disk_space = m2_per_scatter_size
         }
     }
 
