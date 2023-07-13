@@ -1,5 +1,5 @@
 {
-    "WorkflowUrl":"https://raw.githubusercontent.com/microsoft/gatk4-somatic-snvs-indels-azure/az2.7.0/mutect2.wdl",
+    "WorkflowUrl":"https://raw.githubusercontent.com/microsoft/gatk4-somatic-snvs-indels-azure/mattmcl4475/update-scatter-vm-size/mutect2.wdl",
     "WorkflowInputsUrl":"https://raw.githubusercontent.com/microsoft/gatk4-somatic-snvs-indels-azure/az2.7.0/mutect2.inputs.json",
     "WorkflowOptionsUrl":null,
     "WorkflowDependenciesUrl":null
